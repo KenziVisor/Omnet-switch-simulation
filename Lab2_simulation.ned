@@ -20,7 +20,7 @@ simple Application
 {
     parameters:
         volatile double TimeBetweenPackets @unit(s);
-        volatile int MsgSize @unit(byte);
+        volatile double MsgSizeDist;
     gates:
         inout Ip_gate;
 }
@@ -63,7 +63,7 @@ simple Switch
 {
     parameters:
         volatile double AgeingTime @unit(s);
-        volatile double SwitchLatincyTime @unit(s);
+        volatile double SwitchLatincyConstant;
     gates:
         inout gate[];
 }
